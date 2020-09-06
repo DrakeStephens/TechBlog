@@ -6,22 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">Tech Blog</a>
-      </h1>
-      {{#if loggedIn}}
-      <nav>
-        <a href="/dashboard">dashboard</a>
-        <button id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-      {{/if}}
-      </nav>
+      <div class="bg-white">
+        <h1 class="text-primary">
+          <a href="/">Tech Blog</a>
+        </h1>
+        {{#if loggedIn}}
+        <nav>
+          <a href="/dashboard">dashboard</a>
+          <a id="logout">logout</a>
+          {{else}}
+          <a href="/login">Login</a>
+          <a href="/signup">Signup</a>
+          {{/if}}
+        </nav>
+      </div>
     </header>
     <main>
       {{{ body }}}
