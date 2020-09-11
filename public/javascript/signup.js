@@ -14,14 +14,12 @@ async function signupFormHandler(event) {
           password
         }),
         headers: { 'Content-Type': 'application/json' }
-      });
-  
-      // check the response status
-      if (response.ok) {
-        document.location.replace('/dashboard');
-      } else {
-        alert(response.statusText);
-      }
+      })
+      .then(function() {
+        document.location.replace("/dashboard");
+      })
+      .catch(err => console.log(err));
+
     }
   }
 
